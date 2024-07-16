@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace c19_38_BackEnd.Controllers
 {
@@ -6,6 +7,7 @@ namespace c19_38_BackEnd.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -17,7 +19,17 @@ namespace c19_38_BackEnd.Controllers
         {
             _logger = logger;
         }
+       
+        /// <summary>
+        /// Obtiene una lista de pronósticos meteorológicos para los próximos 5 días.
+        /// </summary>
+        /// <remarks>
+        /// Devuelve una lista de pronósticos meteorológicos basados en el día actual más los próximos 5 días.
+        /// Cada pronóstico incluye la fecha, la temperatura en grados Celsius y un resumen descriptivo del clima.
+        /// </remarks>
 
+        [ProducesResponseType(typeof(IEnumerable<WeatherForecast>),200)]
+        [ProducesResponseType(500)]
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {

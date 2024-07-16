@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\c19-38-BackEnd.props" />
+</Project>
