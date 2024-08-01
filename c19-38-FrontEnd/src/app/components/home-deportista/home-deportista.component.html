@@ -1,98 +1,436 @@
 <!--NAVBAR-->
 <nav class="bg-white border-b-4 border-[#2D3648] mb-4 p-4">
-    <div class="flex justify-between items-center">
-        <div class="logo bg-[#2D3648] text-white text-2xl py-2 px-12">Logo</div>
-        <div class="tabs flex space-x-11 relative">
-          <a [routerLink]="['/home']" class="tab text-[#2D3648]">Inicio</a>
-            <div class="relative group">
-                <a href="#" class="tab text-[#2D3648] flex items-center relative">
-                    Rutinas <span class="ml-1">&#9660;</span>
-                </a>
-                <div class="submenu absolute hidden group-hover:block bg-white border border-[#2D3648] mt-2 w-48 transition duration-300 ease-in-out">
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Rutinas</a>
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tips de nutrición</a>
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Entrenando en casa</a>
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Yoga</a>
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Cardio</a>
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Musculación</a>
-                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">GAP</a>
-                </div>
-            </div>
-            <a href="#" class="tab text-[#2D3648]">Mis Rutinas</a>
-            <a href="#" class="tab text-[#2D3648]">Comunidad Fitness</a>
-            <a href="#" class="tab text-[#2D3648]">Producto</a>
+  <div class="flex justify-between items-center">
+    <div class="logo bg-[#2D3648] text-white text-2xl py-2 px-12">Logo</div>
+    <div class="tabs flex space-x-11 relative">
+      <a [routerLink]="['/home']" class="tab text-[#2D3648]">Inicio</a>
+      <div class="relative group">
+        <a href="#" class="tab text-[#2D3648] flex items-center relative">
+          Rutinas <span class="ml-1">&#9660;</span>
+        </a>
+        <div class="submenu absolute hidden group-hover:block bg-white border border-[#2D3648] mt-2 w-48 transition duration-300 ease-in-out">
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Rutinas</a>
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tips de nutrición</a>
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Entrenando en casa</a>
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Yoga</a>
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Cardio</a>
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Musculación</a>
+          <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">GAP</a>
         </div>
-        <div class="buttons space-x-2">
-            <a class="btn2 border-2 border-[#2D3648] bg-[#2D3648] text-white py-2 px-3 font-bold" [routerLink]="'/signin'">Sumate</a>
-        </div>
+      </div>
+      <a href="#" class="tab text-[#2D3648]">Mis Rutinas</a>
+      <a href="#" class="tab text-[#2D3648]">Comunidad Fitness</a>
+      <a href="#" class="tab text-[#2D3648]">Producto</a>
     </div>
+    <div class="buttons space-x-2">
+      <a class="btn2 border-2 border-[#2D3648] bg-[#2D3648] text-white py-2 px-3 font-bold" [routerLink]="'/signin'">Sumate</a>
+    </div>
+  </div>
 </nav>
 
 <!-- SECTION CARDS -->
-<!-- <div class="objectives flex justify-between items-center p-4">
-  
-  <!-- Imagen en el lado izquierdo -->
-  <!-- <div class="w-1/2 text-center">
-    <!-- Imagen grande que ilustra la sección -->
-    <!-- <img src="assets/encuesta3.png" alt="Large Image" class="w-[579px] h-[579px] object-contain mx-auto">
+<section class="objectives p-4">
+  <div class="text-center mb-8">
+    <h1 class="text-3xl font-bold text-[#2D3648]">Bienestar A Tu Alcance</h1>
+    <p class="text-lg text-center max-w-4xl mx-auto">
+      Combina rutinas efectivas con consejos de nutrición y seguimiento de tu progreso en una sola plataforma.
+      Conéctate con entrenadores y otros usuarios para compartir tus experiencias y mantener la motivación.
+      ¡Empieza ahora y descubre cómo transformar tu vida!
+    </p>
   </div>
-  
-  <!-- Sección de texto y formulario en el lado derecho -->
-  <!-- <div class="flex flex-col items-center w-1/2 space-y-4">
-    <!-- Título principal de la sección -->
-    <!-- <h1 class="text-[#2D3648] text-2xl font-bold text-center mb-4">¿Qué te motiva a hacer ejercicio?</h1>
-    
-    <!-- Descripción breve debajo del título -->
-    <!-- <p class="text-lg text-center">Con una motivación adecuada, es más probable que alcances tus objetivos de forma física.</p>
-    
-    <!-- Cuadro de texto para ingresar la motivación -->
-    <!-- <textarea placeholder="Escribe que te motiva aquí..." class="w-full max-w-xl h-32 p-4 border rounded-lg"></textarea>
-    
-    <!-- Botón para continuar a la siguiente sección -->
-    <!-- <button class="btn bg-[#2D3648] text-white py-2 px-6 font-bold rounded-lg" (click)="navigateTo('encuesta4')">Continuar</button>
-  </div>
-  
-</div> -->
 
-<!--FOOTER-->
+  <div class="flex justify-center mb-8">
+    <div class="slidebar flex space-x-4">
+      <div class="slide-item text-center" (click)="seleccionarCategoria('yoga')">
+        <img src="assets/yoga.png" alt="Yoga" class="slide-img">
+        <p>Yoga</p>
+      </div>
+      <div class="slide-item text-center" (click)="seleccionarCategoria('peso')">
+        <img src="assets/pesoCorporal.png" alt="Peso" class="slide-img">
+        <p>Peso <br>Corporal</p>
+      </div>
+      <div class="slide-item text-center" (click)="seleccionarCategoria('cardio')">
+        <img src="assets/cardio.png" alt="Cardio" class="slide-img">
+        <p>Cardio</p>
+      </div>
+      <div class="slide-item text-center" (click)="seleccionarCategoria('resistencia')">
+        <img src="assets/resistencia.png" alt="Resistencia" class="slide-img">
+        <p>Resistencia</p>
+      </div>
+      <div class="slide-item text-center" (click)="seleccionarCategoria('fuerza')">
+        <img src="assets/fuerza.png" alt="Fuerza" class="slide-img">
+        <p>Fuerza</p>
+      </div>
+      <div class="slide-item text-center" (click)="seleccionarCategoria('estiramiento')">
+        <img src="assets/estiramiento.png" alt="Estiramiento" class="slide-img">
+        <p>Estiramiento</p>
+      </div>
+      <div class="slide-item text-center" (click)="seleccionarCategoria('nutricion')">
+        <img src="assets/nutricion.png" alt="Nutricion" class="slide-img">
+        <p>Nutrición</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenido-dinamico">
+    <!-- Contenido para Yoga -->
+    <div class="contenido-yoga hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+          <div class="resources w-1/2 relative">
+              <img src="assets/yogaPrincipiantes.png" alt="Yoga Intro" class="w-full h-auto">
+              <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                  <div class="card-content">
+                      <h1 class="text-xl font-bold">Introducción a Yoga para principiantes</h1>
+                      <p>Aprende las posturas básicas y la filosofía detrás del yoga.</p>
+                      
+                      <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                  </div>
+              </div>
+          </div>
+          <div class="resources w-1/2 relative">
+              <video controls class="w-full">
+                  <source src="assets/principiosDelYoga.mp4" type="video/mp4">
+                  Tu navegador no soporta el video.
+              </video>
+              <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                  <div class="card-content">
+                      <h1 class="text-xl font-bold">Principios del yoga</h1>
+                      <p>Mira un corto video acerca de los principios básicos del yoga.</p>
+                      <p>Créditos: <a href="https://www.youtube.com/watch?v=uYHmPC8TAJU" target="_blank" class="text-[#00567F]">Daniela Amkie</a></p>
+                      <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-principios']">Ver más</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+          <video controls class="w-full">
+            <source src="assets/beneficiosDelYoga.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+            <div class="card-content">
+              <h1 class="text-xl font-bold">Beneficios del yoga</h1>
+              <p>Mira un corto video acerca de los beneficios del yoga.</p>
+              <p>Créditos: <a href="https://www.youtube.com/watch?v=uYHmPC8TAJU" target="_blank" class="text-[#00567F]">Daniela Amkie</a></p>
+              <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-principios']">Ver más</button>
+            </div>
+          </div>
+        </div>
+        <div class="resources w-1/2 relative">
+          <img src="assets/yogaEstres.png" alt="Yoga Avanzado" class="w-full h-auto">
+          <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+            <div class="card-content">
+            <h1 class="text-xl font-bold">Yoga para reducir el estrés</h1>
+            <p>Descubre cómo el yoga puede ayudarte a reducir el estrés y encontrar la paz interior.</p>
+            <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido para Peso Corporal -->
+    <div class="contenido-peso hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/aumentarPeso.png" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Guía para principiantes</h1>
+                    <p>Consejos y ejercicios básicos para comenzar a ganar masa muscular.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/masaMuscular.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Masa muscular</h1>
+                    <p>Mira un video acerca de la importancia de la masa muscular.</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=OddpVyHC8S0" target="_blank" class="text-[#00567F]">Dr. Carlos Jaramillo
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-between items-center p-4 contenido">
+      <div class="resources w-1/2 relative">
+        <video controls class="w-full">
+          <source src="assets/beneficiosDelPeso.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+        <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+          <div class="card-content">
+            <h1 class="text-xl font-bold">Peso corporal</h1>
+            <p>Mira un video acerca de los beneficios del peso corporal.</p>
+            <p>Créditos: <a href="https://www.youtube.com/watch?v=OQH_idmPSDA" target="_blank" class="text-[#00567F]">Centro Júlia Farré Dietistas - Nutricionistas</a></p>
+            <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="resources w-1/2 relative">
+        <img src="assets/buenPeso.jpg" alt="Yoga Avanzado" class="w-full h-auto">
+        <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+          <div class="card-content">
+          <h1 class="text-xl font-bold">Como mantener un buen peso.</h1>
+          <p>Descubre cómo el mantenimiento de un buen peso corporal te puede ayudar a mejorar tu salud.</p>
+          <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Contenido para Cardio -->
+    <div class="contenido-cardio hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/cardioCasa.png" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Guía para cardio</h1>
+                    <p>Consejos y ejercicios básicos para comenzar a entrenar cardio.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/cardioCasa.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Entrenamiento de cardio</h1>
+                    <p>Mira un video sobre un entrenamiento cardiovascular.</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=ZKB5rmrU49E" target="_blank" class="text-[#00567F]">Fausto Murillo
+
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Contenido para Resistencia -->
+    <div class="contenido-resistencia hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/guiaResistencia.jpg" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Guía para entrenar la resistencia.</h1>
+                    <p>Consejos y ejercicios básicos para comenzar a entrenar resistencia.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/resistenciaFisica.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Resistencia</h1>
+                    <p>Mira un video acerca de la importancia de la resistencia</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=lPYppo6SHEc" target="_blank" class="text-[#00567F]">Will Entrena
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Contenido para Fuerza -->
+    <div class="contenido-fuerza hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/entrenoFuerza.png" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Entrenamiento de fuerza</h1>
+                    <p>Rutina de fuerza para incrementar tu masa muscular y mejorar de condición.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/entrenamientoFuerza.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Entrenamiento de fuerza</h1>
+                    <p>Mira un video de un entrenamiento de fuerza.</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=jYwHKLo75kc" target="_blank" class="text-[#00567F]"> Myprotein España
+                      
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Contenido para Estiramiento -->
+    <div class="contenido-estiramiento hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/estiramientoPostura.png" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Ejercicios para mejorar la postura</h1>
+                    <p>Rutina de ejercicios para corregir y mejorar tu postura.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/rutinaEstiramientos.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Estiramientos</h1>
+                    <p>Mira los estiramientos para antes y despues del entreno.</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=Lx4YFmORsWc" target="_blank" class="text-[#00567F]">gymvirtual
+                      
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Contenido para Nutrición -->
+    <div class="contenido-nutricion hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/snacks.png" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Snacks saludables </h1>
+                    <p>Opciones de snacks nutritivos y fáciles de llevar al trabajo o la escuela.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/importanciaNutricion.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Nutrición</h1>
+                    <p>Mira un video acerca de la importancia de la nutrición.</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=vj3jPvixnuU" target="_blank" class="text-[#00567F]">CompendioDeSalud
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Contenido para Suplementación -->
+    <div class="contenido-suplementacion hidden">
+      <div class="flex justify-between items-center p-4 contenido">
+        <div class="resources w-1/2 relative">
+            <img src="assets/aumentarPeso.png" alt="Yoga Intro" class="w-full h-auto">
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Guía para principiantes</h1>
+                    <p>Consejos y ejercicios básicos para comenzar a ganar masa muscular.</p>
+                    
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <div class="resources w-1/2 relative">
+            <video controls class="w-full">
+                <source src="assets/masaMuscular.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="card-container absolute bottom-0 left-0 bg-white p-4 shadow-lg">
+                <div class="card-content">
+                    <h1 class="text-xl font-bold">Masa muscular</h1>
+                    <p>Mira un video acerca de la importancia de la masa muscular.</p>
+                    <p>Créditos: <a href="https://www.youtube.com/watch?v=OddpVyHC8S0" target="_blank" class="text-[#00567F]">Dr. Carlos Jaramillo
+                    </a></p>
+                    <button class="btn bg-[#2D3648] text-white py-1 px-2 mt-2" [routerLink]="['/yoga-intro']">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section class="buttons-section p-4">
+  <div class="flex justify-center mb-8">
+    <button class="action-button mx-2">Adquirir mi rutina de entrenamiento</button>
+    <button class="action-button mx-2">Deseo asesoramiento por parte de un entrenador</button>
+    <button class="action-button mx-2">Deseo contratar una membresía, para asesoramiento continuo y ver clases en vivo</button>
+    <button class="action-button mx-2">Deseo entrar a la comunidad social</button>
+  </div>
+</section>
+
+
+
 <footer class="bg-[#2D3648] text-white p-4 mt-auto">
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-    <div>
-      <div class="text-2xl mb-2">Logo</div>
-    </div>
-    <div>
-      <h4 class="text-xl mb-2">Mapa del sitio</h4>
-      <ul class="space-y-1">
-        <li>About us</li>
-        <li>Services</li>
-        <li>Blog</li>
-        <li>Contact us</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-xl mb-2">PRODUCT</h4>
-      <ul class="space-y-1">
-        <li>Pricing</li>
-        <li>Featuring</li>
-        <li>Customers</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-xl mb-2">HELP</h4>
-      <ul class="space-y-1">
-        <li>Getting started</li>
-        <li>Network status</li>
-        <li>FAQs</li>
-        <li>Referral program</li>
-      </ul>
-    </div>
-  </div>
-  <div class="flex justify-center mt-4 space-x-4">
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-twitter"></i>
-    <i class="fab fa-instagram"></i>
-  </div>
-  <div class="text-center mt-4">
-    <p>&#64; 2024 Name of the company</p>
+      <div>
+          <div class="text-2xl mb-2">Logo</div>
+      </div>
+      <div>
+          <h4 class="text-xl mb-2">Mapa del sitio</h4>
+          <ul class="space-y-1">
+              <li>About us</li>
+              <li>Contact</li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+          </ul>
+      </div>
+      <div>
+          <h4 class="text-xl mb-2">Redes sociales</h4>
+          <ul class="space-y-1">
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>LinkedIn</li>
+          </ul>
+      </div>
+      <div>
+          <h4 class="text-xl mb-2">Contacto</h4>
+          <ul class="space-y-1">
+              <li>Email</li>
+              <li>Teléfono</li>
+          </ul>
+      </div>
   </div>
 </footer>
+

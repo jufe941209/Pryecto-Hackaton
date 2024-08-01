@@ -1,0 +1,159 @@
+.frame-container {
+  position:relative;
+}
+
+.frame-guide {
+  width: 100%;
+  height: auto;
+}
+
+.top-card-container {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 489px;
+  height: 149px;
+  margin-top: -90px; /* Ajusta esta propiedad para subir la card */
+  margin-left: 90px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.left-image {
+  width: 50px;
+  height: 57px;
+}
+
+
+.section-title {
+  color: #00567F;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center; /* Centra el título */
+}
+.card-container h1{
+  font-size: 3rem;
+}
+
+.section-description, .card-container p {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 40px; /* Ajusta el margen izquierdo */
+  padding-right: 40px; /* Ajusta el margen derecho */
+}
+
+.description {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Botón para volver a la página anterior */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2D3648; /* Color del botón */
+  color: white;
+  border: 7px solid transparent; /* Borde del botón */
+  border-radius: 50px; /* Forma ovalada */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  white-space: pre-wrap; /* Para que el texto se ajuste en dos líneas */
+  max-width: 150px; /* Asegura que el texto se ajuste */
+}
+
+.close-button:hover {
+  background-color: #1A2637; /* Color más oscuro al pasar el ratón */
+  transform: scale(1.05);
+}
+
+.yoga-intro-content {
+  margin-top: 50px;
+}
+
+.card-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0px 80px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #00567F;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Hacer el CSS responsive */
+@media (max-width: 768px) {
+  .top-card-container {
+    width: 100%;
+    height: auto;
+    margin-top: -60px; /* Ajustar la posición en pantallas pequeñas */
+  }
+
+  .frame-guide {
+    width: 100%;
+  }
+
+  .card-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .left-image {
+    width: 40px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-card-container {
+    margin-top: -30px; /* Ajuste adicional para pantallas muy pequeñas */
+  }
+
+  .card-container {
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .section-description {
+    font-size: 0.85rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .left-image {
+    width: 30px;
+    height: 35px;
+  }
+}

@@ -12,6 +12,8 @@ import { Encuesta4Component } from './components/encuesta4/encuesta4.component';
 import { Encuesta5Component } from './components/encuesta5/encuesta5.component';
 import { Encuesta6Component } from './components/encuesta6/encuesta6.component';
 import { HomeDeportistaComponent } from './components/home-deportista/home-deportista.component';
+import { YogaIntroComponent } from './yoga-intro/yoga-intro.component';
+import { YogaPrincipiosComponent } from './yoga-principios/yoga-principios.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -23,6 +25,11 @@ export const routes: Routes = [
     {path: 'encuesta4', component: Encuesta4Component},
     {path: 'encuesta5', component: Encuesta5Component},
     {path: 'encuesta6', component: Encuesta6Component},
+    {path: 'yoga-intro', component:YogaIntroComponent},
+    {path: 'yoga-principios', component: YogaPrincipiosComponent},
+
+
+
     {path: 'homeDeportista', component: HomeDeportistaComponent},
 
     
