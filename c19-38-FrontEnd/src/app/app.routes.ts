@@ -14,6 +14,7 @@ import { Encuesta6Component } from './components/encuesta6/encuesta6.component';
 import { HomeDeportistaComponent } from './components/home-deportista/home-deportista.component';
 import { YogaIntroComponent } from './yoga-intro/yoga-intro.component';
 import { YogaPrincipiosComponent } from './yoga-principios/yoga-principios.component';
+import { HomeEntrenadorComponent } from './components/home-entrenador/home-entrenador.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -30,6 +31,7 @@ export const routes: Routes = [
 
 
 
+    {path: 'homeEntrenador', component:HomeEntrenadorComponent},
     {path: 'homeDeportista', component: HomeDeportistaComponent},
 
     

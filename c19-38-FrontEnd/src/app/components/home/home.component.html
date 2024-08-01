@@ -1,6 +1,9 @@
 <nav class="bg-white border-b-4 border-[#2D3648] mb-4 p-4">
   <div class="flex justify-between items-center">
-      <div class="logo bg-[#2D3648] text-white text-2xl py-2 px-12">Logo</div>
+    <div class="logo bg-[#2D3648] py-2 px-12">
+      <img src="assets/logo.png" alt="Logo" class="w-32 h-auto">
+    </div>
+
       <div class="tabs flex space-x-11 relative">
         <a [routerLink]="['/home']" class="tab text-[#2D3648]">Inicio</a>
           <div class="relative group">
@@ -8,7 +11,7 @@
                   Rutinas <span class="ml-1">&#9660;</span>
               </a>
               <div class="submenu absolute hidden group-hover:block bg-white border border-[#2D3648] mt-2 w-48 transition duration-300 ease-in-out">
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Rutinas</a>
+                <a routerLink="/homeDeportista" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Rutinas</a>
                   <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tips de nutrición</a>
                   <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Entrenando en casa</a>
                   <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Yoga</a>
@@ -30,7 +33,7 @@
 <!-- Sección de Objetivos -->
 <section class="flex flex-wrap justify-between items-center px-12 py-16 bg-gray-100">
   <div class="objectives w-full md:w-1/2">
-      <h1 class="text-5xl font-bold text-[#2D3648]">Alcanza tus objetivos con NOMBREAPP</h1>
+      <h1 class="text-5xl font-bold text-[#2D3648]">Alcanza tus objetivos con BodyBoost</h1>
       <p class="mt-12 text-lg">
           Accede a ejercicios y programas específicos, desde yoga hasta intensas sesiones de peso corporal, con o sin equipamiento. <br><br>
           Accede a nuestra membresía para entrenar con nuestros expertos, donde y cuando quieras.
@@ -81,9 +84,9 @@
 
 <footer class="bg-[#2D3648] text-white p-4">
   <div class="grid grid-cols-4 gap-8">
-      <div>
-          <div class="text-2xl mb-2">Logo</div>
-      </div>
+    <div class="flex justify-center items-center bg-[#2D3648] p-4">
+      <img src="assets/logoWhite.png" alt="Logo" class="w-40 h-auto">
+    </div>
       <div>
           <h4 class="text-xl mb-2">Mapa del sitio</h4>
           <ul class="space-y-1">

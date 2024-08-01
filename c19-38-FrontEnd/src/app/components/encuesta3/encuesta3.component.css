@@ -16,12 +16,14 @@ body {
 }
 
 .logo {
-    background-color: #2D3648;
+    margin-left: 3.8rem;
+    background-color: #ffffff;
     color: #ffffff;
-    font-size: 1.5rem;
-    padding: 10px 20px;
+    font-size: 3rem; /* Font size relative to base */
+    padding: 20px;
     border-radius: 7px;
-}
+  }
+  
 
 .tabs {
     display: flex;

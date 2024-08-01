@@ -1,0 +1,66 @@
+<nav class="bg-white border-b-4 border-[#2D3648] mb-4 p-4">
+    <div class="flex justify-between items-center">
+        <div class="logo bg-[#2D3648] py-2 px-12">
+            <img src="assets/logo.png" alt="Logo" class="w-32 h-auto">
+          </div>
+      
+        <div class="tabs flex space-x-11 relative">
+          <a [routerLink]="['/home']" class="tab text-[#2D3648]">Inicio</a>
+            <div class="relative group">
+                <a href="#" class="tab text-[#2D3648] flex items-center relative">
+                    Rutinas <span class="ml-1">&#9660;</span>
+                </a>
+                <div class="submenu absolute hidden group-hover:block bg-white border border-[#2D3648] mt-2 w-48 transition duration-300 ease-in-out">
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Rutinas</a>
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tips de nutrición</a>
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Entrenando en casa</a>
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Yoga</a>
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Cardio</a>
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Musculación</a>
+                    <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">GAP</a>
+                </div>
+            </div>
+            <a href="#" class="tab text-[#2D3648]">Comunidad Fitness</a>
+            <a href="#" class="tab text-[#2D3648]">Producto</a>
+        </div>
+        <div class="buttons space-x-2">
+            <a class="btn border-2 border-[#2D3648] text-[#2D3648] py-2 px-3 font-bold" [routerLink]="'/login'">Iniciar sesión</a>
+            <a class="btn2 border-2 border-[#2D3648] bg-[#2D3648] text-white py-2 px-3 font-bold" [routerLink]="'/signin'">Sumate</a>
+        </div>
+    </div>
+  </nav>
+
+  <footer class="bg-[#2D3648] text-white p-4 mt-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="flex justify-center items-center bg-[#2D3648] p-4">
+        <img src="assets/logoWhite.png" alt="Logo" class="w-40 h-auto">
+      </div>
+        <div>
+            <h4 class="text-xl mb-2">Mapa del sitio</h4>
+            <ul class="space-y-1">
+                <li>About us</li>
+                <li>Contact</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl mb-2">Redes sociales</h4>
+            <ul class="space-y-1">
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl mb-2">Contacto</h4>
+            <ul class="space-y-1">
+                <li>Email</li>
+                <li>Teléfono</li>
+            </ul>
+        </div>
+    </div>
+  </footer>
+  
+  
