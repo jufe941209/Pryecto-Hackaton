@@ -1,9 +1,12 @@
 <div class="yoga-intro-container p-4">
     <div class="frame-container">
-        <video class="frame-video" controls>
-            <source src="assets/principiosDelYoga.mp4" type="video/mp4">
-            Tu navegador no soporta el formato de video.
-        </video>
+        <iframe class="frame-video" 
+                src="https://www.youtube.com/embed/uYHmPC8TAJU" 
+                title="Principios del Yoga" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
         <button class="close-button" (click)="closeFrame()">Volver a la página anterior</button>
         <div class="top-card-container p-4 flex items-center justify-between">
             <div class="flex items-center">

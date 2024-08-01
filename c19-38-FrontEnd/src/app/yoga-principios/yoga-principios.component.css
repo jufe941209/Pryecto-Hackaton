@@ -2,11 +2,12 @@
     position:relative;
   }
   .frame-video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    height: 715px; /* Altura recomendada para videos de YouTube en relación de aspecto 16:9 */
+    border: none; /* Elimina el borde del iframe */
+    border-radius: 8px; /* Ajusta el radio del borde si es necesario */
+}
+
   .frame-guide {
     width: 100%;
     height: auto;

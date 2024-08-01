@@ -187,6 +187,13 @@ section img {
     
 }
 
+.frame-video {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 390px; /* Altura recomendada para videos de YouTube en relación de aspecto 16:9 */
+    border: none; /* Elimina el borde del iframe */
+    border-radius: 8px; /* Ajusta el radio del borde si es necesario */
+}
+
 /* Estilo para el contenido dentro del contenedor de la tarjeta */
 .card-content {
     display: flex;
@@ -334,6 +341,9 @@ section img {
     .slidebar {
         flex-direction: column;
         align-items: center;
+    }
+    .frame-video {
+        height: auto; /* Ajusta la altura automáticamente para pantallas pequeñas */
     }
 }
 
