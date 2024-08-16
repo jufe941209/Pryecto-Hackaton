@@ -1,6 +1,0 @@
-@c19_38_BackEnd_HostAddress = https://localhost:7281
-
-GET {{c19_38_BackEnd_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
