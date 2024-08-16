@@ -195,6 +195,25 @@ nav {
     background-color: #007bb5;
   }
   
+/* Password visibility icon */
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 2.75rem; /* Añade espacio para el ícono */
+}
+
+.password-container .password-toggle {
+  position: absolute;
+  right: 1rem; /* Ajusta según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem; /* Tamaño del ícono */
+  color: #666;
+  cursor: pointer;
+}
+
   /* Footer styles */
   footer {
     background-color: #2D3648;
@@ -263,23 +282,6 @@ nav {
     }
   }
   
-/* Password visibility icon */
-.password-container {
-    position: relative;
-  }
-  
-  .password-container input {
-    padding-right: 2.75rem; /* Añade espacio para el ícono */
-  }
-  
-  .password-container .password-toggle {
-    position: absolute;
-    right: 1rem; /* Ajusta según sea necesario */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.25rem; /* Tamaño del ícono */
-    color: #666;
-    cursor: pointer;
-  }
+
 
   

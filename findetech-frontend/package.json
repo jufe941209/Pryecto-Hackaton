@@ -26,6 +26,8 @@
     "@types/jquery": "^3.5.30",
     "express": "^4.18.2",
     "jquery": "^3.7.1",
+    "ng-recaptcha": "^13.2.1",
+    "ngx-captcha": "^13.0.0",
     "ngx-owl-carousel-o": "^18.0.0",
     "owl.carousel": "^2.3.4",
     "rxjs": "~7.8.0",

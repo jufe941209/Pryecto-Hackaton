@@ -1,99 +1,499 @@
-
-<!--NAVBAR-->
-
-<nav class="bg-white border-b-4 border-[#2D3648] mb-4 p-4">
+<nav class="bg-[#042870] border-b-4 border-[#2D3648] mb-4 p-4">
   <div class="flex justify-between items-center">
-    <div class="logo bg-[#2D3648] py-2 px-12">
-      <img src="assets/logo.png" alt="Logo" class="w-32 h-auto">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" class="logo-img">
     </div>
+
       <div class="tabs flex space-x-11 relative">
         <a [routerLink]="['/home']" class="tab text-[#2D3648]">Inicio</a>
+        <a href="#" class="tab text-[#2D3648]">Nosotros</a>
           <div class="relative group">
               <a href="#" class="tab text-[#2D3648] flex items-center relative">
-                  Rutinas <span class="ml-1">&#9660;</span>
+                  Nuestros servicios <span class="ml-1">&#9660;</span>
               </a>
               <div class="submenu absolute hidden group-hover:block bg-white border border-[#2D3648] mt-2 w-48 transition duration-300 ease-in-out">
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Rutinas</a>
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tips de nutrición</a>
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Entrenando en casa</a>
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Yoga</a>
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Cardio</a>
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Musculación</a>
-                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">GAP</a>
+                <a routerLink="" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tramites</a>
+                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Encuesta SARAS</a>
+                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Encuesta PILAS</a>
+                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Presenta PQR</a>
+                  <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Solicita un prestamo</a>
               </div>
           </div>
-          <a href="#" class="tab text-[#2D3648]">Mis Rutinas</a>
-          <a href="#" class="tab text-[#2D3648]">Comunidad Fitness</a>
-          <a href="#" class="tab text-[#2D3648]">Producto</a>
+          <a href="#" class="tab text-[#2D3648]">Noticias</a>
+
       </div>
       <div class="buttons space-x-2">
-          
+          <a class="btn border-2 border-[#2D3648] text-[#2D3648] py-2 px-3 font-bold" [routerLink]="'/login'">Iniciar sesión</a>
           <a class="btn2 border-2 border-[#2D3648] bg-[#2D3648] text-white py-2 px-3 font-bold" [routerLink]="'/signin'">Sumate</a>
       </div>
   </div>
 </nav>
 
 
-<!--SECTION CARDS-->
+<!-- Sección de formulario -->
+<section class="flex flex-wrap justify-between items-center px-12 py-16 bg-gray-100">
 
-<div class="flex justify-between p-4">
-  <div class="flex items-center justify-center w-1/2 space-x-4">
-    <div class="card bg-white border shadow p-4 w-[202px] h-[258px] rounded-lg cursor-pointer" (click)="navigateTo('homeEntrenador')">
-      <img src="assets/entrenador1.png" alt="Entrenador" class="w-full h-auto">
-      <h3 class="text-lg font-bold text-[#2D3648] text-center">Entrenador</h3>
-      <p class="text-sm text-[#2D3648] text-center">Quiero enseñar una actividad</p>
+ <!-- Formulario de registro -->
+ <div class="w-full lg:w-3/4 bg-white p-8 shadow-lg rounded-lg mx-auto">
+  <h1 class="text-3xl font-bold text-[#2D3648] mb-8 text-center">FORMULARIO DE IDENTIFICACIÓN DE RIESGOS AMBIENTALES Y SOCIALES - FIRAS INVERSIÓN</h1>
+  
+  <form [formGroup]="signUpForm" (ngSubmit)="onRegister()">
+      
+      <!-- Título 1 -->
+      <h2 class="text-2xl font-bold text-[#2D3648] mb-6">1. INFORMACIÓN GENERAL DEL CRÉDITO</h2>
+
+      <!-- Pregunta 1.1 -->
+      <div class="mb-6">
+          <label for="companyName" class="block text-gray-700 text-sm font-bold mb-2">1.1 Nombre o razón social de la empresa o entidad que toma el crédito:</label>
+          <input id="companyName" formControlName="companyName" placeholder="Nombre" maxlength="150" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+      </div>
+
+        <!-- Pregunta 1.2 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div>
+              <label for="ciiu" class="block text-gray-700 text-sm font-bold mb-2">CIIU Principal:</label>
+              <input id="ciiu" formControlName="ciiu" type="number" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+          </div>
+      </div>
+
+          <!-- Pregunta 1.3 -->
+          <div class="mb-6">
+            <label for="sectorDescription" class="block text-gray-700 text-sm font-bold mb-2">1.2 Describa a qué sector pertenece y a qué se dedica:</label>
+            <input id="sectorDescription" formControlName="sectorDescription" placeholder="Descripción" maxlength="250" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+        </div>
+
+         <!-- Pregunta 1.4 -->
+         <div class="mb-6">
+          <label for="resourceUse" class="block text-gray-700 text-sm font-bold mb-2">1.3 Indique el uso de los recursos de crédito:</label>
+          <select id="resourceUse" formControlName="resourceUse" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+              <option value="">Seleccione una opción</option>
+              <option value="inversion">Inversión</option>
+              <option value="sustitucion">Sustitución de deuda</option>
+          </select>
+      </div>
+
+           <!-- Pregunta 1.5 -->
+           <div class="mb-6">
+            <label for="creditValue" class="block text-gray-700 text-sm font-bold mb-2">1.4 Valor del crédito con Findeter (COP):</label>
+            <input id="creditValue" formControlName="creditValue" type="number" placeholder="$" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+        </div>
+
+          <!-- Pregunta 1.6 -->
+          <div class="mb-6">
+            <label for="creditExclusion" class="block text-gray-700 text-sm font-bold mb-2">1.5 ¿El crédito incluye alguna actividad de la Lista de Exclusión de Findeter mostrada en la pestaña 3 del formulario?</label>
+            <select id="creditExclusion" formControlName="creditExclusion" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+                <option value="">Seleccione una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+          <!-- Título 2 -->
+      <h2 class="text-2xl font-bold text-[#2D3648] mb-6">2. GESTIÓN AMBIENTAL Y SOCIAL DEL BENEFICIARIO DEL CRÉDITO</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+            <label for="hasEnvironmentalDept" class="block text-gray-700 text-sm font-bold mb-2">2.1 ¿Cuenta con Departamento de Gestión Ambiental y Social?</label>
+            <select id="hasEnvironmentalDept" formControlName="hasEnvironmentalDept" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+                <option value="">Seleccione una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div>
+            <label for="hasASPersonnel" class="block text-gray-700 text-sm font-bold mb-2">2.2 ¿Cuenta con personal encargado de temas A&S y climáticos?</label>
+            <select id="hasASPersonnel" formControlName="hasASPersonnel" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+                <option value="">Seleccione una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
     </div>
-    <div class="card bg-white border shadow p-4 w-[202px] h-[258px] rounded-lg cursor-pointer" (click)="navigateTo('encuesta2')">
-      <img src="assets/a-pie1.png" alt="Aprendiz" class="w-full h-auto">
-      <h3 class="text-lg font-bold text-[#2D3648] text-center">Aprendiz</h3>
-      <p class="text-sm text-[#2D3648] text-center">Quiero aprender una actividad</p>
-    </div>
+
+      <!-- Preguntas 2.3 y 2.4 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="hasEnvironmentalPolicies" class="block text-gray-700 text-sm font-bold mb-2">2.3 ¿Cuenta con políticas o directrices ambientales en su empresa?</label>
+      <select id="hasEnvironmentalPolicies" formControlName="hasEnvironmentalPolicies" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
   </div>
-  <div class="w-1/2 text-center">
-    <img src="assets/large_image.jpg" alt="Large Image" class="w-[579px] h-[579px] object-contain mx-auto">
+  <div>
+      <label for="hasISO14001" class="block text-gray-700 text-sm font-bold mb-2">2.4 ¿Cuenta con certificaciones de tipo ambiental ISO 14001?</label>
+      <select id="hasISO14001" formControlName="hasISO14001" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+</div>
+
+          <!-- Preguntas 2.5 y 2.6 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="hasLegalMatrix" class="block text-gray-700 text-sm font-bold mb-2">2.5 ¿Cuenta con matriz legal ambiental o documento similar?</label>
+      <select id="hasLegalMatrix" formControlName="hasLegalMatrix" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+  <div>
+      <label for="preventsImpacts" class="block text-gray-700 text-sm font-bold mb-2">2.6 ¿Identifica y previene los impactos ambientales y sociales de su empresa?</label>
+      <select id="preventsImpacts" formControlName="preventsImpacts" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+</div>
+
+        <!-- Preguntas 2.7 y 2.8 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="hasComplaintMechanism" class="block text-gray-700 text-sm font-bold mb-2">2.7 ¿Cuenta con un mecanismo para atender quejas y reclamos por parte de la comunidad?</label>
+      <select id="hasComplaintMechanism" formControlName="hasComplaintMechanism" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+  <div>
+      <label for="compliesLaborLaw" class="block text-gray-700 text-sm font-bold mb-2">2.8 ¿Cumple con la normatividad laboral nacional aplicable vigente?</label>
+      <select id="compliesLaborLaw" formControlName="compliesLaborLaw" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+</div>
+
+          <!-- Preguntas 2.9 y 2.10 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="conductsSupervision" class="block text-gray-700 text-sm font-bold mb-2">2.9 ¿Realiza seguimiento a la normatividad ambiental?</label>
+      <select id="conductsSupervision" formControlName="conductsSupervision" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+  <div>
+      <label for="managesWaste" class="block text-gray-700 text-sm font-bold mb-2">2.10 ¿Realiza gestión de los residuos sólidos y líquidos que genera?</label>
+      <select id="managesWaste" formControlName="managesWaste" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+</div>
+
+      <!-- Título 3 -->
+<h2 class="text-2xl font-bold text-[#2D3648] mb-6">3. GESTIÓN DE IMPACTOS Y RIESGOS SOCIOAMBIENTALES ASOCIADOS AL CRÉDITO</h2>
+
+         <!-- Preguntas 3.1 y 3.2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="preventsIncidents" class="block text-gray-700 text-sm font-bold mb-2">3.1 ¿Previene y minimiza los riesgos e impactos ambientales de la operación?</label>
+      <select id="preventsIncidents" formControlName="preventsIncidents" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+  <div>
+      <label for="emergencyPlan" class="block text-gray-700 text-sm font-bold mb-2">3.2 ¿Cuenta con plan de manejo de emergencias en caso de incidentes ambientales?</label>
+      <select id="emergencyPlan" formControlName="emergencyPlan" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+</div>
+
+      <!-- Preguntas 3.3 y 3.4 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="hasCompensationPlan" class="block text-gray-700 text-sm font-bold mb-2">3.3 ¿Cuenta con un plan de compensación de impactos ambientales?</label>
+      <select id="hasCompensationPlan" formControlName="hasCompensationPlan" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+  <div>
+      <label for="socialResponsibility" class="block text-gray-700 text-sm font-bold mb-2">3.4 ¿Lleva a cabo acciones de responsabilidad social?</label>
+      <select id="socialResponsibility" formControlName="socialResponsibility" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+</div>
+
+         <!-- 3.5 y subcategorías -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="projectCategory" class="block text-gray-700 text-sm font-bold mb-2">3.5 Seleccione la categoría del proyecto / inversión:</label>
+      <select id="projectCategory" formControlName="projectCategory" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="infraestructura">Obras de infraestructura (construcciones)</option>
+          <option value="equipos">Adquisición de equipos, maquinaria y/o vehículos</option>
+          <option value="dotacion">Dotación</option>
+          <option value="bienes">Adquisición de bienes inmuebles</option>
+          <option value="estudios">Estudios, diseños</option>
+          <option value="otro">Otro</option>
+      </select>
+  </div>
+
+  <div>
+      <label for="infrastructureType" class="block text-gray-700 text-sm font-bold mb-2">Indique qué tipo de "Obras de Infraestructura":</label>
+      <select id="infrastructureType" formControlName="infrastructureType" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="nueva">Construcción nueva</option>
+          <option value="ampliacion">Ampliación o mejoramiento de infraestructura existente</option>
+          <option value="mantenimiento">Mantenimiento/rehabilitación</option>
+      </select>
   </div>
 </div>
 
 
-<!--FOOTER-->
+        <!-- 3.6 -->
+<div class="grid mb-6">
+  <label for="developmentZone" class="block text-gray-700 text-sm font-bold mb-2">3.6 Seleccione la zona donde se desarrolla:</label>
+  <select id="developmentZone" formControlName="developmentZone" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="urbana">Zona urbana</option>
+      <option value="expansion">Zona de expansión urbana</option>
+      <option value="rural">Zona rural</option>
+      <option value="suburbana">Zona suburbana</option>
+      <option value="proteccion">Zona de protección</option>
+      <option value="mixta">Zona mixta</option>
+  </select>
+</div>
+
+       <!-- 3.8 -->
+<div class="grid mb-6">
+  <label for="executionTime" class="block text-gray-700 text-sm font-bold mb-2">3.8 Plazo estimado de ejecución (en días):</label>
+  <input id="executionTime" formControlName="executionTime" type="number" placeholder="Días" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+</div>
+
+<!-- 3.9 -->
+<div class="grid mb-6">
+  <label for="environmentalFactors" class="block text-gray-700 text-sm font-bold mb-2">3.9 Describa los factores ambientales que podrían impactar el proyecto (máximo 150 caracteres):</label>
+  <textarea id="environmentalFactors" formControlName="environmentalFactors" maxlength="150" placeholder="Descripción" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"></textarea>
+</div>
+        
+     <!-- 3.11 y sub-secciones -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="preConsultation" class="block text-gray-700 text-sm font-bold mb-2">3.11 En caso de que el proyecto / inversión se desarrolle en zonas con pueblos indígenas, raizales, palenqueras, gitanos (ROM), afrocolombianas, afecte o se comercialice patrimonio cultural, ¿se surtió el procedimiento de consulta previa?</label>
+      <select id="preConsultation" formControlName="preConsultation" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+          <option value="na">N/A</option>
+      </select>
+  </div>
+
+  <div>
+      <label for="communitySpec" class="block text-gray-700 text-sm font-bold mb-2">Indique el pueblo/comunidad:</label>
+      <input id="communitySpec" formControlName="communitySpec" placeholder="Pueblo/Comunidad" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+  </div>
+</div>
+
+      <!-- 3.11.1 -->
+<div class="grid mb-6">
+  <label for="biodiversityValuation" class="block text-gray-700 text-sm font-bold mb-2">3.11.1 ¿Se considera la valoración que atribuyen las Comunidades Afectadas y otros actores relevantes a la biodiversidad y los servicios ecosistémicos?</label>
+  <select id="biodiversityValuation" formControlName="biodiversityValuation" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+  </select>
+</div>
+
+<!-- Explicación y evidencia para 3.11.1 -->
+<div class="grid mb-6">
+  <label for="valuationExplanation" class="block text-gray-700 text-sm font-bold mb-2">Explicar brevemente y/o adjuntar evidencia:</label>
+  <input id="valuationExplanation" formControlName="valuationExplanation" placeholder="Explicación" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+</div>
+
+     <!-- 3.11.2 -->
+<div class="grid mb-6">
+  <label for="infoVerification" class="block text-gray-700 text-sm font-bold mb-2">3.11.2 ¿Existen medidas para verificar que se haya informado a las comunidades y pueblos indígenas sus derechos garantizados por la legislación?</label>
+  <select id="infoVerification" formControlName="infoVerification" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+  </select>
+  <label for="infoVerificationDetails" class="block text-gray-700 text-sm font-bold mb-2 mt-2">Favor indique cuáles:</label>
+  <input id="infoVerificationDetails" formControlName="infoVerificationDetails" placeholder="Detalles" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+</div>
+
+   <!-- Impacto y consentimiento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="impactInfo" class="block text-gray-700 text-sm font-bold mb-2">¿Se informa a los pueblos afectados sobre las posibles consecuencias del proyecto o inversión?</label>
+      <select id="impactInfo" formControlName="impactInfo" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+      </select>
+  </div>
+
+  <div>
+    <label for="consent" class="block text-gray-700 text-sm font-bold mb-2">¿El proyecto o inversión se desarrolla bajo el marco de consentimiento previo, libre e informado?</label>
+    <select id="consent" formControlName="consent" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+        <option value="">Seleccione una opción</option>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+    </select>
+</div>
+</div>
+
+     <!-- Participación comunitaria -->
+<div class="grid mb-6">
+  <label for="communityParticipation" class="block text-gray-700 text-sm font-bold mb-2">¿Se garantiza la participación justa y equitativa de la comunidad?</label>
+  <select id="communityParticipation" formControlName="communityParticipation" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+  </select>
+  <label for="communityParticipationDetails" class="block text-gray-700 text-sm font-bold mb-2 mt-2">Explicar brevemente y/o adjuntar evidencia:</label>
+  <input id="communityParticipationDetails" formControlName="communityParticipationDetails" placeholder="Detalles" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+</div>
+
+<!-- Título 4 -->
+<h2 class="text-2xl font-bold text-[#2D3648] mb-6">4. PERMISOS AMBIENTALES Y SOCIALES DEL PROYECTO O INVERSIÓN</h2>
+
+<!-- 4.1 -->
+<div class="grid mb-6">
+  <label for="diagnosticRequired" class="block text-gray-700 text-sm font-bold mb-2">4.1 ¿El proyecto / inversión requiere de Diagnóstico Ambiental de Alternativas?</label>
+  <select id="diagnosticRequired" formControlName="diagnosticRequired" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+  </select>
+</div>
+      <!-- 4.2 -->
+<div class="grid mb-6">
+  <label for="licenseRequired" class="block text-gray-700 text-sm font-bold mb-2">4.2 ¿El proyecto / inversión requiere de Licencia Ambiental?</label>
+  <select id="licenseRequired" formControlName="licenseRequired" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+  </select>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div>
+          <label for="licenseStatus" class="block text-gray-700 text-sm font-bold mb-2">Estado Licencia:</label>
+          <select id="licenseStatus" formControlName="licenseStatus" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+              <option value="">Seleccione una opción</option>
+              <option value="en_tramite">En trámite</option>
+              <option value="vigente">Vigente</option>
+              <option value="por_iniciar">Por iniciar gestión</option>
+              <option value="suspendido">Suspendido / No vigente</option>
+          </select>
+      </div>
+      <div>
+          <label for="resolutionNumber" class="block text-gray-700 text-sm font-bold mb-2">Resolución No.</label>
+          <input id="resolutionNumber" formControlName="resolutionNumber" type="number" placeholder="Número de resolución" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+      </div>
+  </div>
+</div>
+     <!-- 4.3 -->
+<div class="grid mb-6">
+  <label for="otherPermits" class="block text-gray-700 text-sm font-bold mb-2">4.3 ¿Requiere permisos ambientales, sociales y/o municipales?</label>
+  <select id="otherPermits" formControlName="otherPermits" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm">
+      <option value="">Seleccione una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+  </select>
+</div>
+
+<!-- Declaración -->
+<div class="mb-6">
+  <p class="text-gray-700 text-sm mb-4">Declaro:</p>
+  <p class="text-gray-700 text-sm mb-4">(i) que lo aquí consignado corresponde a información veraz y respaldada, (ii) que conozco la política de redescuento de Findeter contenida en el Reglamento para Operaciones de Redescuento de Findeter, (iii) que conozco la legislación Colombiana vigente en materia ambiental y social que le aplica al proyecto, (iv) que se cuenta o se gestionarán oportunamente los permisos que apliquen para el proyecto o inversión a financiar y (v) que conozco y autorizo a Findeter a usar la información contenida en este formulario para lo relacionado con la gestión de la financiación solicitada y consecución de recursos que la soporten, (vi) que Findeter tendrá la potestad de verificar la veracidad de la información aquí consignada, en caso de verlo necesario, (vii) que la persona o personas que diligencian este formulario pueden ser contactadas y su identidad puede ser autentificada.</p>
+</div>
+
+     <!-- Información del diligenciante -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="diligenciadorName" class="block text-gray-700 text-sm font-bold mb-2">Nombre de la persona que diligenció:</label>
+      <input id="diligenciadorName" formControlName="diligenciadorName" placeholder="Nombre completo" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+  </div>
+  <div>
+      <label for="diligenciadorPosition" class="block text-gray-700 text-sm font-bold mb-2">Cargo:</label>
+      <input id="diligenciadorPosition" formControlName="diligenciadorPosition" placeholder="Cargo" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+  </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  <div>
+      <label for="diligenciadorId" class="block text-gray-700 text-sm font-bold mb-2">No. de identificación:</label>
+      <input id="diligenciadorId" formControlName="diligenciadorId" type="number" placeholder="Número de identificación" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"/>
+  </div>
+  <div>
+      <label for="diligenciadorDate" class="block text-gray-700 text-sm font-bold mb-2">Fecha:</label>
+      <input id="diligenciadorDate" formControlName="diligenciadorDate" type="date" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm" min="2024-08-16"/>
+  </div>
+</div>
+
+
+<!-- Botón de enviar -->
+<button type="submit" class="w-full bg-[#007bff] text-white py-2 px-4 rounded-md font-bold hover:bg-[#0056b3] focus:outline-none focus:shadow-outline">
+  Enviar
+</button>
+        
+       
+      </form>
+  </div>
+</section>
+
+
+
+<!--Footer-->
+
+
 <footer class="bg-[#2D3648] text-white p-4">
-  <div class="grid grid-cols-4 gap-8">
-    <div class="flex justify-center items-center bg-[#2D3648] p-4">
-      <img src="assets/logoWhite.png" alt="Logo" class="w-40 h-auto">
+    <div class="grid grid-cols-4 gap-8">
+      <div class="flex justify-center items-center bg-[#2D3648] p-4">
+        <img src="assets/logoWhite.png" alt="Logo" class="w-40 h-auto">
+      </div>
+        <div>
+            <h4 class="text-xl mb-2">Mapa del sitio</h4>
+            <ul class="space-y-1">
+                <li>About us</li>
+                <li>Services</li>
+                <li>Blog</li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl mb-2">PRODUCT</h4>
+            <ul class="space-y-1">
+                <li>Pricing</li>
+                <li>Featuring</li>
+                <li>Customers</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl mb-2">HELP</h4>
+            <ul class="space-y-1">
+                <li>Getting started</li>
+                <li>Network status</li>
+                <li>FAQs</li>
+                <li>Referral program</li>
+            </ul>
+        </div>
     </div>
-    <div>
-      <h4 class="text-xl mb-2">Mapa del sitio</h4>
-      <ul class="space-y-1">
-        <li>About us</li>
-        <li>Services</li>
-        <li>Blog</li>
-        <li>Contact us</li>
-      </ul>
+    <div class="flex justify-center mt-4 space-x-4">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
     </div>
-    <div>
-      <h4 class="text-xl mb-2">PRODUCT</h4>
-      <ul class="space-y-1">
-        <li>Pricing</li>
-        <li>Featuring</li>
-        <li>Customers</li>
-      </ul>
+    <div class="text-center mt-4">
+        <p>&#64; 2024 Name of the company</p>
     </div>
-    <div>
-      <h4 class="text-xl mb-2">HELP</h4>
-      <ul class="space-y-1">
-        <li>Getting started</li>
-        <li>Network status</li>
-        <li>FAQs</li>
-        <li>Referral program</li>
-      </ul>
-    </div>
-  </div>
-  <div class="flex justify-center mt-4 space-x-4">
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-twitter"></i>
-    <i class="fab fa-instagram"></i>
-  </div>
-  <div class="text-center mt-4">
-    <p>&#64; 2024 Name of the company</p>
-  </div>
-</footer>
+  </footer>

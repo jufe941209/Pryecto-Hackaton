@@ -31,42 +31,57 @@
 
 
 <!-- Sección de Iniciar Sesión -->
-<section class="flex flex-wrap justify-between items-center px-12 py-16 bg-gray-100">
+<section class="flex flex-wrap justify-between items-center px-8 py-16 bg-gray-100">
     <!-- Formulario de inicio de sesión -->
     <div class="w-full md:w-1/2 bg-white p-8 shadow-lg rounded-lg max-w-md mx-auto">
         <h1 class="text-3xl font-bold text-[#2D3648] mb-6 text-center">Iniciar sesión</h1>
-        <form>
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" 
-                       class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0091D6] focus:border-[#0091D6]"/>
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <div class="mb-6">
+                <label for="email" class="block text-gray-700 text-base font-semibold mb-2">Correo electrónico:</label>
+                <input type="email" id="email" formControlName="email" placeholder="Tu correo electrónico" 
+                       class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0091D6] focus:border-[#0091D6]"/>
             </div>
-            <div class="mb-4 relative password-container">
-                <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
+            <div class="mb-6 relative password-container">
+                <label for="password" class="block text-gray-700 text-base font-semibold mb-2">Contraseña:</label>
                 <input 
                   type="password" 
                   id="password" 
-                  name="password" 
+                  formControlName="password" 
                   placeholder="Tu contraseña" 
                   [type]="showPassword ? 'text' : 'password'"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0091D6] focus:border-[#0091D6]"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0091D6] focus:border-[#0091D6]"
                 />
-                <span class="password-toggle" (click)="togglePasswordVisibility()">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" (click)="togglePasswordVisibility()">
                     <i class="fas" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
                 </span>
             </div>
-            <a href="#" class="text-sm text-[#00567F] hover:text-[#003c54] block mb-4 text-left">¿Olvidaste tu contraseña?</a>
-            <button type="submit" class="w-full bg-[#0091D6] text-white py-2 px-4 rounded-lg font-bold hover:bg-[#0077b6] transition" [routerLink]="'/homeDeportista'" >Iniciar sesión</button>
+
+            <div class="mb-6" *ngIf="verificationCodeSent">
+                <label for="verificationCode" class="block text-gray-700 text-base font-semibold mb-2">Código de verificación:</label>
+                <input type="text" id="verificationCode" formControlName="verificationCode" placeholder="Ingresa el código de verificación"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0091D6] focus:border-[#0091D6]"/>
+            </div>
+
+            <a href="#" class="text-sm text-[#00567F] hover:text-[#003c54] block mb-6 text-left">¿Olvidaste tu contraseña?</a>
+            
+            <button type="button" class="w-full bg-[#0091D6] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#0077b6] transition mb-6" (click)="sendVerificationCode()">
+                Enviar código de verificación
+            </button>
+
+            <button type="submit" class="w-full bg-[#0091D6] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#0077b6] transition" [routerLink]="'/encuesta1'" [disabled]="!verificationCodeSent || loginForm.invalid">
+                Iniciar sesión
+            </button>
         </form>
-        <p class="mt-4 text-gray-600 text-center">¿Aún no tienes cuenta? <a href="#" class="text-[#2D3648] font-semibold hover:text-[#00567F]" [routerLink]="'/signin'">Regístrate</a></p>
-
-
+        <p class="mt-6 text-gray-600 text-center">¿Aún no tienes cuenta? <a href="#" class="text-[#2D3648] font-semibold hover:text-[#00567F]" [routerLink]="'/signin'">Regístrate</a></p>
     </div>
+
     <!-- Imagen de inicio de sesión -->
     <div class="w-full md:w-1/2">
-        <img src="assets/bancoLog.jpg" alt="Ejemplo" class="w-full h-full object-cover">
+        <img src="assets/bancoLog.jpg" alt="Ejemplo" class="w-full h-full object-cover rounded-lg shadow-lg">
     </div>
 </section>
+
+
 
 <!-- Footer -->
 <footer class="bg-[#2D3648] text-white p-4">

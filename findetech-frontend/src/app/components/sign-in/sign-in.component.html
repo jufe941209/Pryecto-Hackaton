@@ -12,7 +12,7 @@
                   Nuestros servicios <span class="ml-1">&#9660;</span>
               </a>
               <div class="submenu absolute hidden group-hover:block bg-white border border-[#2D3648] mt-2 w-48 transition duration-300 ease-in-out">
-                <a routerLink="/homeDeportista" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tramites</a>
+                <a routerLink="" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Tramites</a>
                   <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Encuesta SARAS</a>
                   <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Encuesta PILAS</a>
                   <a href="#" class="block px-4 py-2 text-[#2D3648] hover:text-[#00567F]">Presenta PQR</a>
@@ -28,114 +28,272 @@
       </div>
   </div>
 </nav>
+
+
 <!-- Sección de Registro -->
 <section class="flex flex-wrap justify-between items-center px-12 py-16 bg-gray-100">
     <!-- Imagen de registro -->
-    <div class="w-full md:w-1/2">
-      <img src="assets/bancoSign.jpg" alt="Ejemplo" class="w-full h-full object-cover"/>
+    <div class="w-full md:w-5/12">
+        <img src="assets/bancoSign.jpg" alt="Ejemplo" class="w-full h-full object-cover rounded-lg"/>
     </div>
-
+  
     <!-- Formulario de registro -->
-    <div class="w-full md:w-1/2 bg-white p-8 shadow-lg rounded-lg max-w-md mx-auto">
-      <h1 class="text-3xl font-bold text-[#2D3648] mb-6 text-center">Registrarse</h1>
-      <form [formGroup]="signUpForm" (ngSubmit)="onRegister()">
-        <p class="text-center text-lg font-semibold text-blue-600 mb-4 bg-blue-100 p-4 rounded-lg shadow-md">
-          Sé parte del cambio y ayúdanos a cumplir tus sueños.
-        </p>
-
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <label for="firstName" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
-            <input id="firstName" formControlName="firstName" placeholder="Nombre" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-
-
-          <div>
-            <label for="lastName" class="block text-gray-700 text-sm font-bold mb-2">Primer apellido:</label>
-            <input id="lastName" formControlName="lastName" placeholder="Apellido" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mb-4">
-           <div>
-            <label for="lastName2" class="block text-gray-700 text-sm font-bold mb-2">Segundo apellido:</label>
-            <input id="lastName2" formControlName="lastName2" placeholder="Apellido2" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-
-
-          <div>
-            <label for="birthDate" class="block text-gray-700 text-sm font-bold mb-2">Fecha de nacimiento:</label>
-            <input id="birthDate" formControlName="birthDate" type="date" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-          <div>
-            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo electrónico:</label>
-            <input id="email" formControlName="email" placeholder="Correo electrónico" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-          <div>
-            <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono:</label>
-            <input id="telefono" formControlName="email" placeholder="telefono" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <label for="document" class="block text-gray-700 text-sm font-bold mb-2">Tipo de documento:</label>
-            <select id="document" formControlName="document" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
-              <option value="">Seleccione una opción</option>
-              <option value="cedula">Cédula</option>
-              <option value="pasaporte">Pasaporte</option>
-              <option value="cedulaExt">Cedula de extranjeria</option>
-
-            </select>
-          </div>
-          <div>
-            <label for="docNumber" class="block text-gray-700 text-sm font-bold mb-2">Número de documento:</label>
-            <input id="docNumber" formControlName="docNumber" placeholder="Número" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <label for="type" class="block text-gray-700 text-sm font-bold mb-2">Tipo de persona:</label>
-            <select id="type" formControlName="type" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
-              <option value="">Tipe de persona</option>
-              <option value="persona_natural">Persona natural</option>
-              <option value="persona_juridica">Persona jurídica</option>
-            </select>
-          </div>
-          <div>
-            <label for="gender" class="block text-gray-700 text-sm font-bold mb-2">Género:</label>
-            <select id="gender" formControlName="gender" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
-              <option value="">Seleccione un género</option>
-              <option value="masculino">Masculino</option>
-              <option value="femenino">Femenino</option>
-              <option value="otro">Otro</option>
-              <option value="prefiero_no_especificar">Prefiero no especificar</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
-            <input id="password" formControlName="password" type="password" placeholder="Contraseña" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-          <div>
-            <label for="confirmPassword" class="block text-gray-700 text-sm font-bold mb-2">Repetir contraseña:</label>
-            <input id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Repetir contraseña" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"/>
-          </div>
-        </div>
-
-        <div class="mb-4">
-          <input id="terms" type="checkbox" formControlName="acceptTerms" class="mr-2"/>
-          <label for="terms" class="text-sm">He leído y acepto los <a href="#" class="text-[#00567F]">Términos y condiciones</a></label>
-        </div>
-
-        <button type="submit" class="w-full bg-[#0091D6] text-white py-2 px-4 rounded-lg font-bold hover:bg-[#0077b6] transition">Registrarme</button>
-      </form>
+    <div class="w-full md:w-6/12 bg-white p-10 shadow-lg rounded-lg max-w-lg mx-auto">
+        <h1 class="text-3xl font-bold text-[#2D3648] mb-6 text-center">Registrarse</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="onRegister()">
+            <p class="text-center text-lg font-semibold text-blue-600 mb-4 bg-blue-100 p-4 rounded-lg shadow-md">
+                Sé parte del cambio y ayúdanos a cumplir tus sueños.
+            </p>
+  
+            <!-- Campos del formulario -->
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Nombre -->
+                <div>
+                    <label for="firstName" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched}">
+                        Nombre:
+                    </label>
+                    <input id="firstName" formControlName="firstName" placeholder="Nombre"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched}" />
+                    <div *ngIf="signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+                <!-- Primer apellido -->
+                <div>
+                    <label for="lastName" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('lastName')?.invalid && signUpForm.get('lastName')?.touched}">
+                        Primer apellido:
+                    </label>
+                    <input id="lastName" formControlName="lastName" placeholder="Apellido"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('lastName')?.invalid && signUpForm.get('lastName')?.touched}" />
+                    <div *ngIf="signUpForm.get('lastName')?.invalid && signUpForm.get('lastName')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+            </div>
+  
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Segundo apellido -->
+                <div>
+                    <label for="lastName2" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('lastName2')?.invalid && signUpForm.get('lastName2')?.touched}">
+                        Segundo apellido:
+                    </label>
+                    <input id="lastName2" formControlName="lastName2" placeholder="Apellido2"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('lastName2')?.invalid && signUpForm.get('lastName2')?.touched}" />
+                    <div *ngIf="signUpForm.get('lastName2')?.invalid && signUpForm.get('lastName2')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+                <!-- Fecha de nacimiento -->
+                <div>
+                    <label for="birthDate" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('birthDate')?.invalid && signUpForm.get('birthDate')?.touched}">
+                        Fecha de nacimiento:
+                    </label>
+                    <input id="birthDate" formControlName="birthDate" type="date"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('birthDate')?.invalid && signUpForm.get('birthDate')?.touched}" />
+                    <div *ngIf="signUpForm.get('birthDate')?.invalid && signUpForm.get('birthDate')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+            </div>
+  
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Correo electrónico -->
+                <div>
+                    <label for="email" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched}">
+                        Correo electrónico:
+                    </label>
+                    <input id="email" formControlName="email" placeholder="Correo electrónico"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched}" />
+                    <div *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Ingresa un correo electrónico válido.
+                    </div>
+                </div>
+                <!-- Teléfono -->
+                <div>
+                    <label for="telefono" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('telefono')?.invalid && signUpForm.get('telefono')?.touched}">
+                        Teléfono:
+                    </label>
+                    <input id="telefono" formControlName="telefono" placeholder="Teléfono"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('telefono')?.invalid && signUpForm.get('telefono')?.touched}" />
+                    <div *ngIf="signUpForm.get('telefono')?.invalid && signUpForm.get('telefono')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+            </div>
+  
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Tipo de documento -->
+                <div>
+                    <label for="document" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('document')?.invalid && signUpForm.get('document')?.touched}">
+                        Tipo de documento:
+                    </label>
+                    <select id="document" formControlName="document"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('document')?.invalid && signUpForm.get('document')?.touched}">
+                        <option value="">Seleccione una opción</option>
+                        <option value="cedula">Cédula</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="cedulaExt">Cédula de extranjería</option>
+                    </select>
+                    <div *ngIf="signUpForm.get('document')?.invalid && signUpForm.get('document')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+                <!-- Número de documento -->
+                <div>
+                    <label for="docNumber" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('docNumber')?.invalid && signUpForm.get('docNumber')?.touched}">
+                        Número de documento:
+                    </label>
+                    <input id="docNumber" formControlName="docNumber" placeholder="Número"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('docNumber')?.invalid && signUpForm.get('docNumber')?.touched}" />
+                    <div *ngIf="signUpForm.get('docNumber')?.invalid && signUpForm.get('docNumber')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+            </div>
+  
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Tipo de persona -->
+                <div>
+                    <label for="type" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('type')?.invalid && signUpForm.get('type')?.touched}">
+                        Tipo de persona:
+                    </label>
+                    <select id="type" formControlName="type"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('type')?.invalid && signUpForm.get('type')?.touched}">
+                        <option value="">Tipo de persona</option>
+                        <option value="persona_natural">Persona natural</option>
+                        <option value="persona_juridica">Persona jurídica</option>
+                    </select>
+                    <div *ngIf="signUpForm.get('type')?.invalid && signUpForm.get('type')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+                <!-- Género -->
+                <div>
+                    <label for="gender" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('gender')?.invalid && signUpForm.get('gender')?.touched}">
+                        Género:
+                    </label>
+                    <select id="gender" formControlName="gender"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('gender')?.invalid && signUpForm.get('gender')?.touched}">
+                        <option value="">Seleccione un género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                        <option value="prefiero_no_especificar">Prefiero no especificar</option>
+                    </select>
+                    <div *ngIf="signUpForm.get('gender')?.invalid && signUpForm.get('gender')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        Este campo es obligatorio.
+                    </div>
+                </div>
+            </div>
+  
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <!-- Contraseña -->
+                <div>
+                    <label for="password" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched}">
+                        Contraseña:
+                    </label>
+                    <input id="password" formControlName="password" type="password" placeholder="Contraseña"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched}" />
+                    <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        La contraseña debe tener al menos 8 caracteres.
+                    </div>
+                </div>
+                <!-- Repetir contraseña -->
+                <div>
+                    <label for="confirmPassword" class="block text-gray-700 text-lg font-semibold mb-2"
+                        [ngClass]="{'text-red-600': signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched}">
+                        Repetir contraseña:
+                    </label>
+                    <input id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Repetir contraseña"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                        [ngClass]="{'border-red-600': signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched}" />
+                    <div *ngIf="signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched"
+                        class="text-red-600 text-sm mt-1">
+                        La contraseña debe tener al menos 8 caracteres.
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Acepto términos y condiciones -->
+            <div class="mb-4">
+                <input id="terms" type="checkbox" formControlName="acceptTerms" class="mr-2"/>
+                <label for="terms" class="text-sm">He leído y acepto los <a href="#" class="text-[#00567F]">Términos y condiciones</a></label>
+                <div *ngIf="signUpForm.get('acceptTerms')?.invalid && signUpForm.get('acceptTerms')?.touched"
+                    class="text-red-600 text-sm mt-1">
+                    Debe aceptar los términos y condiciones.
+                </div>
+            </div>
+  
+            <!-- Código de verificación -->
+            <div class="mb-4" *ngIf="verificationCodeSent">
+                <label for="verificationCode" class="block text-gray-700 text-lg font-semibold mb-2"
+                    [ngClass]="{'text-red-600': signUpForm.get('verificationCode')?.invalid && signUpForm.get('verificationCode')?.touched}">
+                    Código de verificación:
+                </label>
+                <input type="text" id="verificationCode" formControlName="verificationCode" placeholder="Ingresa el código de verificación"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                    [ngClass]="{'border-red-600': signUpForm.get('verificationCode')?.invalid && signUpForm.get('verificationCode')?.touched}" />
+                <div *ngIf="signUpForm.get('verificationCode')?.invalid && signUpForm.get('verificationCode')?.touched"
+                    class="text-red-600 text-sm mt-1">
+                    Debe ingresar el código de verificación.
+                </div>
+            </div>
+  
+            <div *ngIf="verificationCodeError" class="bg-red-100 text-red-600 p-4 rounded-lg mb-4">
+                <p class="text-sm">Debes completar el código de verificación antes de continuar.</p>
+            </div>
+  
+            <button type="button" class="w-full bg-[#0091D6] text-white py-2 px-4 rounded-lg font-bold hover:bg-[#0077b6] transition mb-4" (click)="sendVerificationCode()">
+                Enviar código de verificación
+            </button>
+  
+            <button type="submit" class="w-full bg-[#0091D6] text-white py-2 px-4 rounded-lg font-bold hover:bg-[#0077b6] transition"
+                [ngClass]="{'bg-blue-500': signUpForm.valid && verificationCodeSent && signUpForm.get('acceptTerms')?.value && !verificationCodeError && signUpForm.get('password')?.value === signUpForm.get('confirmPassword')?.value, 'bg-gray-400': !signUpForm.valid || !verificationCodeSent || verificationCodeError || !signUpForm.get('acceptTerms')?.value || signUpForm.get('password')?.value !== signUpForm.get('confirmPassword')?.value}"
+                [disabled]="!signUpForm.valid || !verificationCodeSent || verificationCodeError || !signUpForm.get('acceptTerms')?.value || signUpForm.get('password')?.value !== signUpForm.get('confirmPassword')?.value">
+                Registrarme
+            </button>
+        </form>
     </div>
-  </section>
+</section>
+
+
+  
+
+
+<!--Footer-->
 
 
 <footer class="bg-[#2D3648] text-white p-4">
