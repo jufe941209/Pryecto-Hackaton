@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
+      }
+    ],
+    "scripts": {
+      "build": "ng build",
+      "dev": "ng serve",
+      "start": "ng serve"
+    },
+    "cleanUrls": true
+  }
